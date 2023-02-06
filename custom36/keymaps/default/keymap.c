@@ -18,8 +18,8 @@ enum layers {
 
 // overrides
 const key_override_t colon_override = ko_make_basic(MOD_MASK_SHIFT, KC_COLN, KC_SCLN);
-const key_override_t dot_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_AT);
-const key_override_t comma_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_AMPR);
+const key_override_t dot_override = ko_make_basic(MOD_MASK_SHIFT, RAT_DOT, KC_AT);
+const key_override_t comma_override = ko_make_basic(MOD_MASK_SHIFT, LAT_COM, KC_AMPR);
 const key_override_t circ_override = ko_make_basic(MOD_MASK_ALT, KC_CIRC, RALT(KC_6));
 
 const key_override_t **key_overrides = (const key_override_t *[]){
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYMBOLS] = LAYOUT_split_3x5_3(
    //|--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------|
-      KC_TILD, KC_HASH, KC_DLR,  KC_PERC, XXXXXXX,            XXXXXXX, KC_CIRC, KC_ASTR, KC_MINS, KC_DEL,
+      KC_TILD, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,            KC_CIRC, KC_AMPR, KC_ASTR, KC_MINS, KC_DEL,
       KC_BSLS, KC_LCBR, KC_LBRC, KC_LPRN, KC_LT,              KC_GT,   KC_RPRN, KC_RBRC, KC_RCBR, KC_SLSH,
       KC_EXLM, KC_PIPE, KC_UNDS, KC_QUOT, KC_GRV,             XXXXXXX, KC_DQUO, KC_EQL,  KC_PLUS, KC_QUES,
    //|--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------|
@@ -60,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_CONTROLS] = LAYOUT_split_3x5_3(
    //|--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------|
-      KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,            XXXXXXX, KC_F13,  KC_F14,  KC_F15,  KC_F16,
+      KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,            XXXXXXX, KC_F17,  KC_F18,  KC_F19,  KC_F20,
+      KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX,            XXXXXXX, KC_F21,  KC_F22,  KC_F23,  KC_F24,
    //|--------+--------+--------+--------+--------|          |--------+--------+--------+--------+--------|
                         XXXXXXX, _______, QK_BOOT,            _______, _______, _______
    //                  |--------+--------+--------|          |--------+--------+--------|
